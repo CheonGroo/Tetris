@@ -271,7 +271,7 @@ public:
                      _rows * Block::squareHeight());
 
         // 난수 씨앗 초기화
-        qsrand(QTime::currentTime().msecsSinceStartOfDay());
+        srand(QTime::currentTime().msecsSinceStartOfDay());
 
         // 판 초기화
         for (int row = 0; row < _rows; ++row)
@@ -424,7 +424,7 @@ private:
             {_blockI, _blockJ, _blockL, _blockO, _blockS, _blockT, _blockZ};
 
         // 새로운 블럭 생성
-        int newBlock = qFloor(qrand() / (RAND_MAX + 1.0f) * 7);
+        int newBlock = qFloor(rand() / (RAND_MAX + 1.0f) * 7);
 
         _block = blocks[newBlock];
 
